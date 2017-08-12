@@ -15,7 +15,7 @@
                             }
                             ?>">
                                 <a value='<?php echo $button['prev']; ?>' class='listbutton hover' <?php ($button['prev'] == 0) ? "disabled" : "" ?>>
-                                    <span class="fa fa-angle-left fa-lg"></span>
+                                    <span class="icon-arrow-left12"></span>
                                 </a>
                             </li>
                             <?php for ($i = $button['start']; $i <= $button['end']; $i++) { ?>
@@ -37,7 +37,7 @@
                             }
                             ?>">
                                 <a value='<?php echo $button['next']; ?>' class='listbutton hover'>
-                                    <span class="fa fa-angle-right fa-lg"></span>
+                                    <span class="icon-arrow-right13"></span>
                                 </a>
                             </li>
                             <li><a value='<?php echo $max_page; ?>' class='listbutton hover'>Last</a></li>
