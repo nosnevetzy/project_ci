@@ -15,11 +15,17 @@
 
 .dropzone {
 	position: relative;
-	border: 3px dashed @gray-lighter;
+	border: 2px dashed @panel-default-border;
 	min-height: 250px;
 	border-radius: @border-radius-small;
-	background-color: #fcfcfc;
+	background-color: #fff;
 	padding: 5px;
+
+	// If inside panel, give it grey background
+	.panel & {
+		background-color: #fcfcfc;
+		border-color: @gray-lighter;
+	}
 
 	// Clickable wrapper
 	&.dz-clickable {

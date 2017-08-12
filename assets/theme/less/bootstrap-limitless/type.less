@@ -84,6 +84,14 @@ mark,
 }
 
 
+// Contextual colors
+.text-muted {
+    a&:hover {
+        color: @text-color;
+    }
+}
+
+
 // SVG sizing
 svg {
     display: block;
@@ -290,8 +298,7 @@ svg {
 .page-header-inverse {
     background-color: @page-header-inverse-bg;
     color: #fff;
-    margin-bottom: (@line-height-computed * 1.5);
-    .box-shadow(@shadow-depth1);
+    margin-bottom: @line-height-computed;
 
     // Change color of small element
     .page-title small {
@@ -355,8 +362,8 @@ svg {
 // White page header
 .page-header-default {
     background-color: @page-header-default-bg;
-    margin-bottom: (@line-height-computed * 1.5);
-    .box-shadow(@shadow-depth1);
+    margin-bottom: @line-height-computed;
+    .box-shadow(0 1px 0 0 @navbar-default-border);
     
     // Cover image
     &.has-cover {
@@ -611,6 +618,18 @@ ul {
             }
         }
     }
+
+    // With vertical borders
+    &-bordered {
+        > li {
+            margin-right: @content-padding-large;
+            border-right: 1px solid @panel-inner-border;
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
 }
 
 // List with icons
@@ -622,6 +641,124 @@ ul {
 
         i {
             margin-right: @element-horizontal-spacing;
+        }
+    }
+}
+
+
+
+// Feed list
+// ------------------------------
+
+// Base
+.list-feed {
+    margin: 0;
+    padding: @list-spacing 0;
+    list-style: none;
+
+    // List item
+    > li {
+        position: relative;
+        margin: 0;
+        padding-bottom: @line-height-computed;
+        padding-left: (@content-padding-large + @list-feed-circle-radius);
+
+        // Circle
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: @list-feed-circle-position;
+            width: @list-feed-circle-radius;
+            height: @list-feed-circle-radius;
+            background-color: @panel-bg;
+            display: inline-block;
+            border-radius: 50%;
+            border: @list-feed-circle-border-width solid @color-slate-500;
+            z-index: 3;
+        }
+
+        // Line
+        &:after {
+            content: '';
+            position: absolute;
+            top: @list-feed-circle-position;
+            left: (@list-feed-circle-radius / 2) - (@list-feed-circle-border-width / 2);
+            bottom: -(@list-feed-circle-position + @list-feed-circle-border-width);
+            width: 0;
+            border-left: (@list-feed-circle-border-width / 2) solid @color-slate-500;
+            border-right: (@list-feed-circle-border-width / 2) solid @color-slate-500;
+            z-index: 2;
+        }
+
+        // First item
+        &:first-child {
+            &:after {
+                top: @list-feed-circle-radius;
+            }
+        }
+
+        // Last item
+        &:last-child {
+            padding-bottom: 0;
+
+            &:after {
+                content: none;
+            }
+        }
+
+        // Setup color inheritance
+        &[class*=border-] {
+            &:before,
+            &:after {
+                border-color: inherit;
+            }
+        }
+    }
+}
+
+
+//
+// Styles
+//
+
+// Filled symbols
+.list-feed-solid {
+    > li:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: (@list-feed-circle-radius / 2);
+    }
+}
+
+// Square
+.list-feed-square {
+    > li:before {
+        content: '';
+        border-radius: 0;
+    }
+}
+
+// Rhombus
+.list-feed-rhombus {
+    > li:before {
+        content: '';
+        border-radius: 0;
+        .rotate(45deg);
+    }
+}
+
+// Time stamp
+.list-feed-time {
+    > li {
+        margin-left: 48px;
+
+        .feed-time {
+            position: absolute;
+            left: -48px;
+            top: 0;
+            font-size: @font-size-small;
         }
     }
 }

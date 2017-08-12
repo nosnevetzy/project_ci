@@ -62,3 +62,14 @@ figcaption {
     margin-top: (@line-height-computed / 2);
     margin-bottom: (@line-height-computed / 2);
 }
+
+// Seamless row
+.row-seamless {
+    margin-left: 0;
+    margin-right: 0;
+
+    > div[class*=col-] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

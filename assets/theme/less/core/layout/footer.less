@@ -4,8 +4,8 @@
 *
 *  Main footer styles, currently 1 version only
 *
-*  Version: 1.1
-*  Latest update: Mar 10, 2016
+*  Version: 1.2
+*  Latest update: Jan 5, 2017
 *
 * ---------------------------------------------------------------------------- */
 
@@ -14,17 +14,17 @@
 .footer {
 	position: absolute;
 	bottom: (@line-height-computed * 1.5);
-	
-	// Add z-index
-	&:not(.navbar-fixed-bottom) {
-		z-index: @zindex-navbar;
-	}
 
 	// Stick to bottom is footer is navbar
 	&.navbar {
 		left: 0;
 		right: 0;
 		bottom: 0;
+
+		// Remove z-index if footer navbar has absolute position
+		&-fixed-bottom {
+			z-index: auto;
+		}
 	}
 	
     // Hide standard footer if navbar is used

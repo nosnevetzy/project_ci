@@ -4,8 +4,8 @@
 *
 *  Core JS file with default functionality configuration
 *
-*  Version: 1.3
-*  Latest update: Aug 10, 2016
+*  Version: 1.2
+*  Latest update: Dec 11, 2015
 *
 * ---------------------------------------------------------------------------- */
 

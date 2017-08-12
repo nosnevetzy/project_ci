@@ -125,6 +125,11 @@
 	&.table-bordered {
 		border-collapse: collapse;
 	}
+
+	// If table has .media container, remove width from .media-body
+	.media-body {
+		width: auto;
+	}
 }
 
 // Wrapper
@@ -198,6 +203,11 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+
+	// Highlight header of footer with .*-accent class
+	&-accent {
+		background-color: @table-bg-accent;
+	}
 }
 
 // Header
@@ -227,9 +237,21 @@
 		// Text, excluding select2 container
 		> span:first-child {
 			float: left;
-			margin: (@padding-base-vertical + 1) @content-padding-large;
+			margin: (@padding-base-vertical + 1) @content-padding-base;
 			margin-left: 0;
 		}
+	}
+
+	// Apply default .form-control styles to select
+	select {
+	    height: @input-height-base;
+	    padding: @padding-base-vertical @padding-base-horizontal;
+	    font-size: @font-size-base;
+	    line-height: @line-height-base;
+	    color: @text-color;
+	    background-color: @input-bg;
+	    border: 1px solid @input-border;
+	    outline: 0;
 	}
 
 	// Left display option
@@ -241,7 +263,7 @@
 	.select2-container {
 		width: auto;
 	}
-	.select2-selection {
+	.select2-choice {
 		min-width: 60px;
 	}
 }
@@ -266,7 +288,7 @@
 			display: inline-block;
 			position: absolute;
 			top: 50%;
-			right: 0;
+			right: @padding-base-horizontal;
 			margin-top: -(@font-size-small / 2);
 			color: @text-muted;
 			line-height: 1;
@@ -277,7 +299,7 @@
 		// Text spacing
 		> span {
 			float: left;
-			margin: (@padding-base-vertical + 1) @content-padding-large;
+			margin: (@padding-base-vertical + 1) @content-padding-base;
 			margin-left: 0;
 		}
 	}
@@ -287,20 +309,14 @@
 		outline: 0;
 		width: 200px;
 		height: @input-height-base;
-		padding: @padding-base-vertical 0;
-		padding-right: (@font-size-small * 2);
+		padding: @padding-base-vertical @padding-base-horizontal;
+		padding-right: ((@padding-base-horizontal * 2) + @font-size-small);
 		font-size: @font-size-base;
 		line-height: @line-height-base;
 		color: @input-color;
 		background-color: @input-bg;
-		border: 1px solid transparent;
-		border-width: 1px 0;
-		border-bottom-color: @input-border;
-
-		&:focus {
-			border-bottom-color: @input-border-highlight-color;
-			.box-shadow(@input-box-shadow);
-		}
+		border: 1px solid @input-border;
+		border-radius: @input-border-radius;
 	}
 
 	// Right display option
@@ -329,13 +345,14 @@
 	// Button
 	.paginate_button {
 		display: inline-block;
-		padding: (@padding-base-vertical + 1);
+		padding: @padding-base-vertical;
 		min-width: @input-height-base;
 		margin-left: 2px;
 		text-align: center;
 		text-decoration: none;
 		cursor: pointer;
 		color: @text-color;
+		border: 1px solid transparent;
 		border-radius: @border-radius-base;
 
 		// First item
@@ -365,7 +382,7 @@
 			&:hover,
 			&:focus {
 				cursor: default;
-				background-color: transparent;
+				background-color: @pagination-disabled-bg;
 				color: @pagination-disabled-color;
 			}
 		}
@@ -457,10 +474,10 @@
 		border-top: 1px solid @panel-default-border;
 	}
 
-	.dataTables_wrapper {
+	> .dataTables_wrapper {
 		.datatable-footer {
 			border-top: 0;
-
+			
 			.dataTables_length,
 			.dataTables_filter,
 			.dataTables_info,
@@ -515,7 +532,7 @@
 .datatable-scroll-lg,
 .datatable-scroll,
 .datatable-scroll-sm {
-	min-height: .01%;
+  min-height: .01%;
 }
 
 // Scroller

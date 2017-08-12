@@ -4,8 +4,8 @@
 *
 *  Specific JS code additions for multiple navbar pages
 *
-*  Version: 1.2
-*  Latest update: Aug 10, 2016
+*  Version: 1.1
+*  Latest update: Nov 25, 2015
 *
 * ---------------------------------------------------------------------------- */
 
