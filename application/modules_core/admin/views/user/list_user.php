@@ -1,9 +1,10 @@
 <?php $this->load->view(admin_dir('template/header')); ?>
+
 <div class="page-header">
     <div class="page-header-content">
         <div class="page-title">
             <h5>
-                <span class="text-semibold">User List</span>
+                <span class="text-semibold"><i class="icon-list-unordered mr-5"></i> User List</span>
             </h5>
         </div>
 
