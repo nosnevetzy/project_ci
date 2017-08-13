@@ -1,143 +1,184 @@
 <?php $this->load->view(admin_dir('template/header')); ?>
-<!--Body content-->
-<div class="right_col" role="main">
-    <div id="clearflash">
-        <div class="page-title">
-            <div class="title_left">
-                <h3>Edit User</h3>
+<!-- Main content -->
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="page-title">
+                <h5>
+                    <span class="text-semibold"><i class="icon-pencil7 mr-5"></i> Edit User</span>
+                </h5>
             </div>
-            <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 pull-right" style="margin: 0;">
-                    <div class="x_content">
-                        <a href="<?php echo admin_url('user/list_user'); ?>"  class="btn btn-round btn-primary" style="float: right;"><span class='fa fa-undo'></span> Back</a>
-                    </div>
+
+            <div class="heading-elements">
+                <div class="btn-group heading-btn">
+                    <a class="text-white" href="<?php echo admin_url('user/list_user'); ?>"><i class="icon-undo position-left">
+                    <button type="button" class="btn bg-teal-400">
+                        </i> Back to list
+                    </button>
+                    </a>
                 </div>
             </div>
-        </div><!-- end of page-title -->
-        <div class="clearfix"></div>
-        <div class="row">
-            <div id="content" class="clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h4>
-                                <span><?php echo $this->Misc->display_name($row->user_fname, $row->user_mname, $row->user_lname); ?>'s Information</span>
-                            </h4>
-                        </div>
-                        <div class="panel-body ">
-                            <div class="row formdata_alert"></div>
-                            <div class="row form-horizontal">
-                                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">ID No.</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_code" value='<?php echo $row->user_code; ?>' readonly/>
-                                        </div>
-                                    </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">* First Name</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_fname" value='<?php echo $row->user_fname; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">* Middle Name</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_mname" value='<?php echo $row->user_mname; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">* Last Name</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_lname"  value='<?php echo $row->user_lname; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">Street</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_street" value='<?php echo $row->user_street; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">City</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_city" value='<?php echo $row->user_city; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">Province</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_province" value='<?php echo $row->user_province; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">Country</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_country" value='<?php echo $row->user_country; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">Contact No</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_contact" value='<?php echo $row->user_contact; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
+        </div>
+    </div>
+    <!-- /page header -->
 
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">* User Type</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <select name="select" class="form-control formdata chosen" id="formdata_usertype">
-                                                <?php foreach ($user_types as $q) { ?>
-                                                    <option value='<?php echo $q->id_user_type; ?>' <?php echo ($q->id_user_type == $row->id_user_type) ? "Selected" : ""; ?> ><?php echo $q->user_type; ?></option>
-                                                <?php }
-                                                ?>
-                                            </select>
-                                        </div>
-                                    </div><!-- End .form-group  -->
+    <!-- Content area -->
+    <div class="content">
 
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">* Department</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <select class="form-control formdata chosen" id="formdata_department" >
-                                                <option value=''></option>
-                                                <?php foreach ($departments as $q) { ?>
-                                                    <option value='<?php echo $q->id_department; ?>' <?= ($row->department_id == $q->id_department) ? 'selected' : ''; ?>><?php echo $q->department_name; ?></option>
-                                                <?php }
-                                                ?>
-                                            </select>
-                                        </div>
-                                    </div><!-- End .form-group  -->
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div id="clearflash">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <form class="form-horizontal form-validate-jquery" novalidate>
+                        <fieldset class="content-group">
+                            <legend class="text-bold"><?php echo $this->Misc->display_name($row->user_fname, $row->user_mname, $row->user_lname); ?>'s Information</legend>
 
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">Email</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_email" value='<?php echo $row->user_email; ?>' />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-
-                                    <div class="form-group">
-                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">Password</label>
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <input type="text" class="form-control formdata" id="formdata_password"  />
-                                        </div>
-                                    </div><!-- End .form-group  -->
-
-                                    <div class="form-group">
-                                        <div class="col-lg-offset-4 col-lg-8">
-                                            <button data-toggle="modal" href="#dfltmodal" class="btn btn-warning ui-wizard-content ui-formwizard-button" id='formdata_confirm' type="button">Save</button>
-                                        </div>
-                                    </div><!-- End .form-group  --> 
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    ID No. <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" id="formdata_code" class="form-control formdata" value='<?php echo $row->user_code; ?>' readonly>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div><!-- End  -->
-                <!-- Page end here -->
-            </div><!-- End #content -->
-        </div><!-- end of row -->
-    </div>
-</div>
-<!-- /page content -->
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    First Name <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" id="formdata_fname" class="form-control formdata" value='<?php echo $row->user_fname; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Middle Name <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" id="formdata_mname" class="form-control formdata" value='<?php echo $row->user_mname; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Last Name <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" id="formdata_lname" class="form-control formdata" value='<?php echo $row->user_lname; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Street <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" id="formdata_street" class="form-control formdata" value='<?php echo $row->user_street; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    City <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" id="formdata_city" class="form-control formdata" value='<?php echo $row->user_city; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Province <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" id="formdata_province" class="form-control formdata" value='<?php echo $row->user_province; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Country <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                   <input type="text" id="formdata_country" class="form-control formdata" value='<?php echo $row->user_country; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Contact No. <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" id="formdata_contact" class="form-control formdata" value='<?php echo $row->user_contact; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    User Type <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <select data-placeholder="Select a User Type..." class="form-control formdata select-search" id="formdata_usertype">
+                                        <?php foreach ($user_types as $q) { ?>
+                                            <option value='<?php echo $q->id_user_type; ?>'
+                                            <?php echo ($q->id_user_type == $row->id_user_type) ? "selected" : ""; ?>><?php echo $q->user_type; ?></option>
+                                        <?php }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Department <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <select data-placeholder="Select a Department..." class="form-control formdata select-search" id="formdata_department">
+                                        <option value=''></option>
+                                        <?php foreach ($departments as $q) { ?>
+                                            <option value='<?php echo $q->id_department; ?>'
+                                            <?= ($row->department_id == $q->id_department) ? 'selected' : ''; ?>><?php echo $q->department_name; ?></option>
+                                        <?php }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Email <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="email" id="formdata_email" class="form-control formdata" value='<?php echo $row->user_email; ?>'>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-lg-3">
+                                    Password <span class="text-danger">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="password" id="formdata_password" class="form-control formdata">
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        
+                        <div class="form-group">
+                            <div class="col-lg-8">
+                                <button data-toggle="modal" href="#dfltmodal" class="btn bg-teal-400 ui-wizard-content ui-formwizard-button" id='formdata_confirm' type="button">Update Information</button>
+                            </div>
+                        </div><!-- End .form-group  -->
+                    </form>
+                </div><!-- end of .x_content -->
+            </div><!-- end of .x_panel -->
+        </div><!-- end of .clearflash -->
+    </div><!-- end of .right_col -->
+    <!-- /page content -->
 
 <script type="text/javascript">
     $(document).ready(function () {
