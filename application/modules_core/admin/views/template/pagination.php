@@ -1,5 +1,5 @@
 <?php if ($list_count > 0) { ?>
-    <div class='dataTables_wrapper form-inline uploadact'>
+    <div class='dataTables_wrapper form-inline uploadact mt-10'>
         <div class="row">
             <div class="col-lg-4">
                 <div class="dataTables_info">Showing <?php echo $rowcount['start']; ?> to <?php echo $rowcount['end']; ?> of <?php echo $list_count; ?> <?php echo ($list_count > 1) ? "entries" : "entry"; ?></div>

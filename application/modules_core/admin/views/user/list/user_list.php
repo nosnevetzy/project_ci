@@ -22,26 +22,26 @@
 
                     <th class="col-lg-2">Code
                         <div style="float: right;">
-                            <a class="listasc" name='user_code' style="margin-right: 5px;" title='Ascending'><span class="fa fa-sort-amount-asc "></span></a>
-                            <a class="listdesc" name='user_code' style="margin-right: 10px;" title='Descending'><span class="fa fa-sort-amount-desc"></span></a>
+                            <a class="listasc" name='user_code' title='Ascending'><span class="icon-arrow-up5 text-slate-700"></span></a>
+                            <a class="listdesc" name='user_code' title='Descending'><span class="icon-arrow-down5 text-slate-700"></span></a>
                         </div>
                     </th>
                     <th class="col-lg-2">Name
                         <div style="float: right;">
-                            <a class="listasc" name='user_name' style="margin-right: 5px;" title='Ascending'><span class="fa fa-sort-amount-asc "></span></a>
-                            <a class="listdesc" name='user_name' style="margin-right: 10px;" title='Descending'><span class="fa fa-sort-amount-desc"></span></a>
+                            <a class="listasc" name='user_name' title='Ascending'><span class="icon-arrow-up5 text-slate-700"></span></a>
+                            <a class="listdesc" name='user_name' title='Descending'><span class="icon-arrow-down5 text-slate-700"></span></a>
                         </div>
                     </th>
                     <th class="col-lg-2">User Type
                         <div style="float: right;">
-                            <a class="listasc" name='user_type' style="margin-right: 5px;" title='Ascending'><span class="fa fa-sort-amount-asc "></span></a>
-                            <a class="listdesc" name='user_type' style="margin-right: 10px;" title='Descending'><span class="fa fa-sort-amount-desc"></span></a>
+                            <a class="listasc" name='user_type' title='Ascending'><span class="icon-arrow-up5 text-slate-700"></span></a>
+                            <a class="listdesc" name='user_type' title='Descending'><span class="icon-arrow-down5 text-slate-700"></span></a>
                         </div>
                     </th>
                     <th class="col-lg-2">Department
                         <div style="float: right;">
-                            <a class="listasc" name='department_name' style="margin-right: 5px;" title='Ascending'><span class="fa fa-sort-amount-asc "></span></a>
-                            <a class="listdesc" name='department_name' style="margin-right: 10px;" title='Descending'><span class="fa fa-sort-amount-desc"></span></a>
+                            <a class="listasc" name='department_name' title='Ascending'><span class="icon-arrow-up5 text-slate-700"></span></a>
+                            <a class="listdesc" name='department_name' title='Descending'><span class="icon-arrow-down5 text-slate-700"></span></a>
                         </div>
                     </th>
 
@@ -96,17 +96,17 @@
                                 <!-- Access Links -->
                                 <?php if ($this->Misc->accessible($this->access, 'users', 'page', 'view_user')) : ?>
                                     <a href="<?php echo admin_url("user/view_user/" . $this->Misc->encode_id($user->id_user)); ?>" title="<?php echo "View $user->user_name's Profile"; ?>"; style="text-decoration:none; margin-right: 10px;"class="tip view_user" >
-                                        <span class="fa fa-search fa-lg"></span>
+                                        <span class="icon-search4 text-slate-700"></span>
                                     </a>
                                 <?php endif; ?>
                                 <?php if ($this->Misc->accessible($this->access, 'users', 'page', 'edit_user')) : ?>
                                     <a href="<?php echo admin_url("user/edit_user/" . $this->Misc->encode_id($user->id_user)); ?>" title="<?php echo "Edit $user->user_name's Profile"; ?>"; style="text-decoration:none; margin-right: 10px;"class="tip view_user" >
-                                        <span class="fa fa-pencil fa-lg"></span>
+                                        <span class="icon-pencil text-slate-700"></span>
                                     </a>
                                 <?php endif; ?>
                                 <?php if ($this->Misc->accessible($this->access, 'users', 'page', 'delete_user')) : ?>
                                     <a href="#dfltmodal" data-toggle="modal" class="tip delete_user" value='<?php echo $this->Misc->encode_id($user->id_user); ?>' title="<?php echo "Delete $user->user_name's Profile"; ?>" style="text-decoration:none; margin-right: 10px;">
-                                        <span class="fa fa-remove fa-lg"></span>
+                                        <span class="icon-trash text-slate-700"></span>
                                     </a>
                                 <?php endif; ?>
 
