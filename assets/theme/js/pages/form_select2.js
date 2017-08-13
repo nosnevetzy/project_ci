@@ -157,12 +157,6 @@ $(function() {
         containerCssClass: 'sortable-target'
     });
 
-    // Add jQuery UI Sortable support
-    $(".sortable-target .select2-selection__rendered").sortable({
-        containment: '.sortable-target',
-        items: '.select2-selection__choice:not(.select2-search--inline)'
-    });
-
 
 
     //
