@@ -39,13 +39,11 @@
 
     <!-- page content -->
     <div class="right_col" role="main" >
-        <div id="clearflash" class="">
-            <div class="panel panel-flat">
-                <div class="panel-body">
-                    <div id='containerList'><center style="min-height: 100vh;"><img src='<?php echo assets_dir("images/animal.gif"); ?>' ></center></div>
-                </div><!-- end of .x_content -->
-            </div><!-- end of .x_panel -->
-        </div><!-- end of .clearflash -->
+        <div class="panel panel-flat">
+            <div class="panel-body">
+                <div id='containerList'><center style="min-height: 100vh;"><img src='<?php echo assets_dir("images/animal.gif"); ?>' ></center></div>
+            </div><!-- end of .x_content -->
+        </div><!-- end of .x_panel -->
     </div><!-- end of .right_col -->
 
     <script type="text/javascript">
