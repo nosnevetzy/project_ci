@@ -37,91 +37,91 @@
                             <legend class="text-bold"><?php echo $this->Misc->display_name($row->user_fname, $row->user_mname, $row->user_lname); ?>'s Information</legend>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     ID No. <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="formdata_code" class="form-control formdata" value='<?php echo $row->user_code; ?>' readonly>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     First Name <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="formdata_fname" class="form-control formdata" value='<?php echo $row->user_fname; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Middle Name <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="formdata_mname" class="form-control formdata" value='<?php echo $row->user_mname; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Last Name <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="formdata_lname" class="form-control formdata" value='<?php echo $row->user_lname; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Street <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="formdata_street" class="form-control formdata" value='<?php echo $row->user_street; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     City <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="formdata_city" class="form-control formdata" value='<?php echo $row->user_city; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Province <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="formdata_province" class="form-control formdata" value='<?php echo $row->user_province; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Country <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                    <input type="text" id="formdata_country" class="form-control formdata" value='<?php echo $row->user_country; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Contact No. <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="formdata_contact" class="form-control formdata" value='<?php echo $row->user_contact; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     User Type <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select data-placeholder="Select a User Type..." class="form-control formdata select-search" id="formdata_usertype">
                                         <?php foreach ($user_types as $q) { ?>
                                             <option value='<?php echo $q->id_user_type; ?>'
@@ -133,10 +133,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Department <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select data-placeholder="Select a Department..." class="form-control formdata select-search" id="formdata_department">
                                         <option value=''></option>
                                         <?php foreach ($departments as $q) { ?>
@@ -149,19 +149,19 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Email <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="email" id="formdata_email" class="form-control formdata" value='<?php echo $row->user_email; ?>'>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-lg-3">
+                                <label class="control-label col-lg-3 text-right">
                                     Password <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-lg-9">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="password" id="formdata_password" class="form-control formdata">
                                 </div>
                             </div>
