@@ -1,39 +1,53 @@
 <?php $this->load->view(admin_dir('template/header')); ?>
+<!-- Main content -->
+<div class="content-wrapper">
 
-<div class="right_col" role="main">
-    <div id="clearflash" class="">
-        <div class="page-title">
-            <div class="clearfix"></div>
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="page-title">
+                <h5>
+                    <i class=" icon-folder-open2 mr-5"></i>
+                    View User Type
+                    <small><?php echo $row->user_type; ?></small>
+                </h5>
+            </div>
+
+            <div class="heading-elements">
+                <div class="btn-group heading-btn">
+                    <a class="text-white" href="<?php echo admin_url('user_type/list_user_type'); ?>"><i class="icon-undo position-left">
+                    <button type="button" class="btn bg-teal-400">
+                        </i> Back to list
+                    </button>
+                    </a>
+                </div>
+            </div>
         </div>
+    </div>
+    <!-- /page header -->
+
+    <!-- Content area -->
+    <div class="content">
+
+    <!-- page content -->
+    <div class="right_col" role="main">
         <div class="row">
             <!--Body content-->
-            <div id="def_body" class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                    <div class="x_title">
-                        <h2><i class="fa fa-folder-open"></i> View User Type<small><?php echo $row->user_type; ?> Information</small></h2>
-                        <a href="<?php echo admin_url('user_type/list_user_type'); ?>"  class="btn btn-round btn-primary" style="float: right;"><span class='fa fa-undo'></span> Back</a>
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <div class="x_content flex">
-                        <div class="col-md-3"></div>
-
-                        <div class="col-md-9">
-                            <div class="row">
-                                <label class="col-lg-4 control-label">User Type</label>
-                                <div class="col-lg-8">
-                                    <p class="form-control-static"><?php echo $row->user_type; ?></p>
-                                </div>
+            <div id="def_body">
+                <div class="panel panel-flat">
+                    <div class="panel-body flex">
+                        <div class="col-md-offset-3 col-lg-offset-3 col-sm-offset-3 col-md-3 col-lg-3 col-sm-3 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label no-margin text-semibold">User Type:</label>
+                                <div class="pull-right"><?php echo $row->user_type; ?></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div><!-- End #def_body -->
-    </div><!-- end of row -->
-</div>
-<!-- /page content -->
+    </div>
+    <!-- /page content -->
 
 
 <?php $this->load->view(admin_dir('template/footer')); ?>
