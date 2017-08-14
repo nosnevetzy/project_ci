@@ -2,7 +2,7 @@
     <div class='dataTables_wrapper'>
         <div class="row">
             <div class="col-lg-4 dataTables_wrapper form-inline dt-bootstrap no-footer">
-                <div class="dataTables_length" id="datatable-fixed-header_length"><label>Show <select class="listdisplay form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label><input type='hidden' class='listsort'></div>
+                <div id="datatable-fixed-header_length"><label>Show <select class="listdisplay form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label><input type='hidden' class='listsort'></div>
             </div>
         </div>
     </div>
@@ -25,9 +25,9 @@
                 <tr>
                     <th>&nbsp;</th>
 
-                    <td>
+                    <th>
                         <input type="text" class="listsearch form-control col-lg-12 uniform-input" id="user_type" placeholder="Search User Type" />
-                    </td>
+                    </th>
 
                     <th>&nbsp;</th>
                 </tr>
@@ -52,7 +52,7 @@
                                 <!-- Access Links -->
                                 <?php if ($this->Misc->accessible($this->access, 'menu', 'page', 'view_menu')) : ?>
                                     <a href="<?php echo admin_url("menu/view_menu/" . $this->Misc->encode_id($user_type->id_user_type)); ?>" title="<?php echo "View $user_type->user_type"; ?>"; style="text-decoration:none; margin-right: 10px;"class="tip view_user" >
-                                        <span class="fa fa-search fa-lg"></span>
+                                        <span class="icon-search4 text-teal-700"></span>
                                     </a>
                                 <?php endif; ?>
 
