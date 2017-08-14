@@ -2,7 +2,7 @@
     <div class='dataTables_wrapper'>
         <div class="row">
             <div class="col-lg-4 dataTables_wrapper form-inline dt-bootstrap no-footer">
-                <div class="dataTables_length" id="datatable-fixed-header_length"><label>Show <select class="listdisplay form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label><input type='hidden' class='listsort'></div>
+                <div id="datatable-fixed-header_length"><label>Show <select class="listdisplay form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label><input type='hidden' class='listsort'></div>
             </div>
         </div>
     </div>
