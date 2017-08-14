@@ -1,48 +1,55 @@
 <?php $this->load->view(admin_dir('template/header')); ?>
-<!--Body content-->
-<div class="right_col" role="main">
-    <div id="clearflash">
-        <div class="page-title">
-            <div class="title_left">
-                <h3>Edit User Type</h3>
+<!-- Main content -->
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="page-title">
+                <h5>
+                    <span class="text-semibold"><i class="icon-pencil7 mr-5"></i> Edit User Type</span>
+                </h5>
             </div>
-            <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 pull-right" style="margin: 0;">
-                    <div class="x_content">
-                        <a href="<?php echo admin_url('user_type/list_user_type'); ?>"  class="btn btn-round btn-primary" style="float: right;"><span class='fa fa-undo'></span> Back</a>
-                    </div>
+
+            <div class="heading-elements">
+                <div class="btn-group heading-btn">
+                    <a class="text-white" href="<?php echo admin_url('user_type/list_user_type'); ?>"><i class="icon-undo position-left">
+                    <button type="button" class="btn bg-teal-400">
+                        </i> Back to list
+                    </button>
+                    </a>
                 </div>
             </div>
-        </div><!-- end of page-title -->
-        <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- /page header -->
+
+    <!-- Content area -->
+    <div class="content">
+
+    <!-- page content -->
+    <div class="right_col" role="main">
         <div class="row">
             <div id="content" class="clearfix">
                 <div class="contentwrapper"><!--Content wrapper-->
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h4>
-                                    <span>User Type Information</span>
-                                </h4>
-                            </div>
-                            <div class="panel-body ">
-                                <div class="row formdata_alert"></div>
-                                <div class="row form-horizontal">
-                                    <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">User Type</label>
-                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                                <input type="text" class="form-control formdata" id="formdata_code" value='<?php echo $row->user_type; ?>'/>
-                                            </div>
-                                        </div><!-- End .form-group  -->
+                    <div class="panel panel-flat">
+                        <div class="panel-body ">
+                            <div class="row formdata_alert"></div>
+                            <div class="row form-horizontal">
+                                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-12 control-label">User Type</label>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                            <input type="text" class="form-control formdata" id="formdata_code" value='<?php echo $row->user_type; ?>'/>
+                                        </div>
+                                    </div><!-- End .form-group  -->
 
-                                        <hr>
-                                        <div class="form-group">
-                                            <div class="col-lg-offset-4 col-lg-8">
-                                                <button data-toggle="modal" href="#dfltmodal" class="btn btn-warning ui-wizard-content ui-formwizard-button" id='formdata_confirm' type="button">Save</button>
-                                            </div>
-                                        </div><!-- End .form-group  --> 
-                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-4 col-lg-8">
+                                            <button data-toggle="modal" href="#dfltmodal" class="btn btn-warning ui-wizard-content ui-formwizard-button" id='formdata_confirm' type="button">Save</button>
+                                        </div>
+                                    </div><!-- End .form-group  --> 
                                 </div>
                             </div>
                         </div>
@@ -52,7 +59,6 @@
             </div><!-- End #content -->
         </div><!-- end of row -->
     </div>
-</div>
 
 
 <script type="text/javascript">

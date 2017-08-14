@@ -13,7 +13,7 @@
 
             <div class="heading-elements">
                 <div class="btn-group heading-btn">
-                    <a class="text-white" href="<?php echo admin_url('user/list_user_type'); ?>"><i class="icon-undo position-left">
+                    <a class="text-white" href="<?php echo admin_url('user_type/list_user_type'); ?>"><i class="icon-undo position-left">
                     <button type="button" class="btn bg-teal-400">
                         </i> Back to list
                     </button>
