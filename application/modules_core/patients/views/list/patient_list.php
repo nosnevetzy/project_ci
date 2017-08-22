@@ -41,16 +41,16 @@
                 </tr>
                 <tr>
                     <th>&nbsp;</th>
-                    <td>
+                    <th>
                         <input type="text" class="listsearch form-control col-lg-12 uniform-input" id="patient_fname" placeholder="Search First Name" />
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         <input type="text" class="listsearch form-control col-lg-12 uniform-input" id="patient_lname" placeholder="Search Last Name" />
-                    </td>
+                    </th>
 
-                    <td>
+                    <th>
                         <input type="text" class="listsearch form-control col-lg-12 uniform-input" id="patient_gender" placeholder="Search Gender" />
-                    </td>
+                    </th>
 
                     <th>&nbsp;</th>
                 </tr>
