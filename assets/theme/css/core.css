@@ -3728,6 +3728,9 @@ li + .dropdown-header.highlight,
     margin-right: 0;
   }
 }
+.navbar-default .navbar-nav > .active > a:after {
+  background-color: #26A69A;
+}
 .navbar-default {
   border-top-color: transparent;
 }

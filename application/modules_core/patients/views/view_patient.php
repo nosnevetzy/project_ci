@@ -35,153 +35,204 @@
                 <div class="row">
                     <!--Body content-->
                     <div id="def_body" class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="panel panel-body">
-                            <ul class="nav nav-tabs">
-                                <li><a data-toggle="tab" href="#info">Information</a></li>
-                                <li><a data-toggle="tab" href="#ref">REFRACTION</a></li>
-                                <li><a data-toggle="tab" href="#cee">COMPREHENSIVE EYE EXAMINATION</a></li>
-                                <li><a data-toggle="tab" href="#cl">CONTACT LENS</a></li>
-                                <li><a data-toggle="tab" href="#iop">IOP MEASUREMENT</a></li>
-                                <li><a data-toggle="tab" href="#vt">VISUAL THERAPY</a></li>
-                                <li><a data-toggle="tab" href="#cer">CERTIFICATION</a></li>
-
+                        <!-- Toolbar -->
+                        <div class="navbar navbar-default navbar-xs content-group">
+                            <ul class="nav navbar-nav visible-xs-block">
+                                <li class="full-width text-center"><a data-toggle="collapse" data-target="#navbar-filter"><i class="icon-menu7"></i></a></li>
                             </ul>
+
+                            <div class="navbar-collapse collapse" id="navbar-filter">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#info" data-toggle="tab"><i class="icon-menu7 position-left"></i> INFORMATION</a></li>
+                                    <li><a href="#ref" data-toggle="tab"><i class="icon-calendar3 position-left"></i> REFRACTION</a></li>
+                                    <li><a href="#cee" data-toggle="tab"><i class="icon-cog3 position-left"></i> COMPREHENSIVE EYE EXAMINATION</a></li>
+                                    <li><a href="#cl" data-toggle="tab"><i class="icon-cog3 position-left"></i> CONTACT LENS</a></li>
+                                    <li><a href="#iop" data-toggle="tab"><i class="icon-cog3 position-left"></i> IOP MEASUREMENT</a></li>
+                                    <li><a href="#vt" data-toggle="tab"><i class="icon-cog3 position-left"></i> VISUAL THERAPY</a></li>
+                                    <li><a href="#cer" data-toggle="tab"><i class="icon-cog3 position-left"></i> CERTIFICATION</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /toolbar -->
+                        <div class="tabbable">
                             <div class="tab-content">
-                                <div id="info" class="tab-pane fade in active">
-                                    <div class="panel-body flex">
-                                        <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
-                                            <div class="profile_img img-avatar">
-                                                <img class="img-responsive avatar-view" src="<?php echo upload_patient_dir($row->id_patient . '/profile/' . $row->patient_picture); ?>" alt="Avatar" title="Change the avatar">
+                                <div class="tab-pane fade in active" id="info">
+                                    <div class="panel panel-flat">
+                                        <div class="panel-body flex">
+                                            <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
+                                                <div class="profile_img img-avatar">
+                                                    <img class="img-responsive avatar-view" src="<?php echo upload_patient_dir($row->id_patient . '/profile/' . $row->patient_picture); ?>" alt="Avatar" title="Change the avatar">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <div class="form-group">
-                                                <label class="control-label no-margin text-semibold">First Name:</label>
-                                                <div class="pull-right"><?php echo $row->patient_fname; ?></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label no-margin text-semibold">Middle Name:</label>
-                                                <div class="pull-right"><?php echo $row->patient_mname; ?></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label no-margin text-semibold">Last Name:</label>
-                                                <div class="pull-right"><?php echo $row->patient_lname; ?></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label no-margin text-semibold">Address:</label>
-                                                <div class="pull-right"><?php echo $row->patient_address; ?></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label no-margin text-semibold">Contact No:</label>
-                                                <div class="pull-right"><?php echo $row->patient_contact; ?></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label no-margin text-semibold">Gender:</label>
-                                                <div class="pull-right"><?php echo $row->patient_gender; ?></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label no-margin text-semibold">Occupation:</label>
-                                                <div class="pull-right"><?php echo $row->patient_occupation; ?></div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="control-label no-margin text-semibold">First Name:</label>
+                                                    <div class="pull-right"><?php echo $row->patient_fname; ?></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label no-margin text-semibold">Middle Name:</label>
+                                                    <div class="pull-right"><?php echo $row->patient_mname; ?></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label no-margin text-semibold">Last Name:</label>
+                                                    <div class="pull-right"><?php echo $row->patient_lname; ?></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label no-margin text-semibold">Address:</label>
+                                                    <div class="pull-right"><?php echo $row->patient_address; ?></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label no-margin text-semibold">Contact No:</label>
+                                                    <div class="pull-right"><?php echo $row->patient_contact; ?></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label no-margin text-semibold">Gender:</label>
+                                                    <div class="pull-right"><?php echo $row->patient_gender; ?></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label no-margin text-semibold">Occupation:</label>
+                                                    <div class="pull-right"><?php echo $row->patient_occupation; ?></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div id="ref" class="tab-pane fade">
-                                    <button data-toggle="modal" href="#dfltmodallg" title="New Refraction" class="tip newrefraction btn bg-green-700">New</button>
-                                    <hr>
-                                    <div class="panel panel-body">
-                                        <?php if ($refraction): ?>
-                                            <table>
-                                                <?php foreach ($refraction as $ref): ?>
-                                                    <tr>
-                                                        <td><?php echo date('F d,Y', strtotime($ref->added_date)) ?></td>
-                                                        <td>
-                                                            <table> 
-                                                                <tr>
-                                                                    <th></th>
-                                                                    <th>SPHERE</th>
-                                                                    <th>CYLINDER</th>
-                                                                    <th>AXIS</th>
-                                                                    <th>PD</th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>OD</th>
-                                                                    <th><?php echo $ref->od_sphere ?></th>
-                                                                    <th><?php echo $ref->od_cylinder ?></th>
-                                                                    <th><?php echo $ref->od_axis ?></th>
-                                                                    <th><?php echo $ref->od_pd ?></th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>OS</th>
-                                                                    <th><?php echo $ref->os_sphere ?></th>
-                                                                    <th><?php echo $ref->os_cylinder ?></th>
-                                                                    <th><?php echo $ref->os_axis ?></th>
-                                                                    <th><?php echo $ref->os_pd ?></th> 
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                        <td>      
-                                                            <button data-toggle="modal" href="#dfltmodallg" title="Edit IOP Measurement" class="tip editrefraction btn bg-blue-700" value='<?php echo $this->Misc->encode_id($ref->id_refraction); ?>'>Edit</button>
-                                                        </td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            </table>
-                                        <?php endif; ?>
+                                <div class="tab-pane fade" id="ref">
+
+                                    <div class="panel panel-flat">
+                                        <div class="panel-heading">
+                                            <button data-toggle="modal" href="#dfltmodallg" title="New Refraction" class="tip newrefraction btn bg-green-700">New</button>
+                                        </div>
+                                        <div class="panel-body">
+                                            <?php if ($refraction): ?>
+                                                <table>
+                                                    <?php foreach ($refraction as $ref): ?>
+                                                        <tr>
+                                                            <td><?php echo date('F d,Y', strtotime($ref->added_date)) ?></td>
+                                                            <td>
+                                                                <table> 
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>SPHERE</th>
+                                                                        <th>CYLINDER</th>
+                                                                        <th>AXIS</th>
+                                                                        <th>PD</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>OD</th>
+                                                                        <th><?php echo $ref->od_sphere ?></th>
+                                                                        <th><?php echo $ref->od_cylinder ?></th>
+                                                                        <th><?php echo $ref->od_axis ?></th>
+                                                                        <th><?php echo $ref->od_pd ?></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>OS</th>
+                                                                        <th><?php echo $ref->os_sphere ?></th>
+                                                                        <th><?php echo $ref->os_cylinder ?></th>
+                                                                        <th><?php echo $ref->os_axis ?></th>
+                                                                        <th><?php echo $ref->os_pd ?></th> 
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td>      
+                                                                <button data-toggle="modal" href="#dfltmodallg" title="Edit IOP Measurement" class="tip editrefraction btn bg-blue-700" value='<?php echo $this->Misc->encode_id($ref->id_refraction); ?>'>Edit</button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                </table>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
+
                                 </div>
-                                <div id="cee" class="tab-pane fade">
-                                    <button class="btn bg-green-700">New</button>
-                                    <hr>
-                                    <div class="panel panel-body">asd</div>
-                                </div>
-                                <div id="cl" class="tab-pane fade">
-                                    <button class="btn bg-green-700">New</button>
-                                    <hr>
-                                    <div class="panel panel-body">asd</div>
-                                </div>
-                                <div id="iop" class="tab-pane fade">
-                                    <button data-toggle="modal" href="#dfltmodallg" title="New IOP Measurement" class="tip newiop btn bg-green-700">New</button>
-                                    <hr>
-                                    <div class="panel panel-body">
-                                        <?php if ($iop): ?>
-                                            <table>
-                                                <?php foreach ($iop as $io): ?>
-                                                    <tr>
-                                                        <td><?php echo date('F d,Y', strtotime($io->added_date)) ?></td>
-                                                        <td><?php echo $io->iop ?></td>
-                                                        <td>      
-                                                            <button data-toggle="modal" href="#dfltmodallg" title="Edit IOP Measurement" class="tip editiop btn bg-blue-700" value='<?php echo $this->Misc->encode_id($io->id_iop); ?>'>Edit</button>
-                                                        </td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            </table>
-                                        <?php endif; ?>
+
+                                <div class="tab-pane fade" id="cee">
+
+                                    <div class="panel panel-flat">
+                                        <div class="panel-body">
+                                            <button class="btn bg-green-700">New</button>
+                                            <hr>
+                                            <div class="panel-body">asd</div>
+                                        </div>
                                     </div>
+
                                 </div>
-                                <div id="vt" class="tab-pane fade">
-                                    <button data-toggle="modal" href="#dfltmodallg" title="New Visual Therapy" class="tip newvt btn bg-green-700">New</button>
-                                    <hr>
-                                    <div class="panel panel-body">
-                                        <?php if ($vt): ?>
-                                            <table>
-                                                <?php foreach ($vt as $vi): ?>
-                                                    <tr>
-                                                        <td><?php echo date('F d,Y', strtotime($vi->added_date)) ?></td>
-                                                        <td><?php echo $vi->visual_therapy ?></td>
-                                                        <td>      
-                                                            <button data-toggle="modal" href="#dfltmodallg" title="Edit Visual Therapy" class="tip editvt btn bg-blue-700" value='<?php echo $this->Misc->encode_id($vi->id_visual_therapy); ?>'>Edit</button>
-                                                        </td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            </table>
-                                        <?php endif; ?>
+
+                                <div class="tab-pane fade" id="cl">
+
+                                    <div class="panel panel-flat">
+                                        <div class="panel-body">
+                                            <button class="btn bg-green-700">New</button>
+                                            <hr>
+                                            <div class="panel-body">asd</div>
+                                        </div>
                                     </div>
+
                                 </div>
-                                <div id="cer" class="tab-pane fade">
-                                    <button class="btn bg-green-700">New</button>
-                                    <hr>
-                                    <div class="panel panel-body">asd</div>
+
+                                <div class="tab-pane fade" id="iop">
+
+                                    <div class="panel panel-flat">
+                                        <div class="panel-heading">
+                                            <button data-toggle="modal" href="#dfltmodallg" title="New IOP Measurement" class="tip newiop btn bg-green-700">New</button>
+                                            <hr>
+                                        </div>
+                                        <div class="panel-body">
+                                            <?php if ($iop): ?>
+                                                <table>
+                                                    <?php foreach ($iop as $io): ?>
+                                                        <tr>
+                                                            <td><?php echo date('F d,Y', strtotime($io->added_date)) ?></td>
+                                                            <td><?php echo $io->iop ?></td>
+                                                            <td>      
+                                                                <button data-toggle="modal" href="#dfltmodallg" title="Edit IOP Measurement" class="tip editiop btn bg-blue-700" value='<?php echo $this->Misc->encode_id($io->id_iop); ?>'>Edit</button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                </table>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane fade" id="vt">
+
+                                    <div class="panel panel-flat">
+                                        <div class="panel-heading">
+                                            <button data-toggle="modal" href="#dfltmodallg" title="New Visual Therapy" class="tip newvt btn bg-green-700">New</button>
+                                            <hr>
+                                        </div>
+                                        <div class="panel panel-body">
+                                            <?php if ($vt): ?>
+                                                <table>
+                                                    <?php foreach ($vt as $vi): ?>
+                                                        <tr>
+                                                            <td><?php echo date('F d,Y', strtotime($vi->added_date)) ?></td>
+                                                            <td><?php echo $vi->visual_therapy ?></td>
+                                                            <td>      
+                                                                <button data-toggle="modal" href="#dfltmodallg" title="Edit Visual Therapy" class="tip editvt btn bg-blue-700" value='<?php echo $this->Misc->encode_id($vi->id_visual_therapy); ?>'>Edit</button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                </table>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="tab-pane fade" id="cer">
+
+                                    <div class="panel panel-flat">
+                                        <div class="panel-body">
+                                            <button class="btn bg-green-700">New</button>
+                                            <hr>
+                                            <div class="panel-body">asd</div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
