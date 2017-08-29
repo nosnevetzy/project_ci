@@ -7,38 +7,63 @@
     <div class="modal-body">
         <div class="row popformdata_alert"></div>
         <form class="form-horizontal form-label-left" novalidate>
-            <div class="item form-group">
-                <div class="col-lg-12">
-                    <table> 
-                        <tr>
-                            <th></th>
-                            <th>SPHERE</th>
-                            <th>CYLINDER</th>
-                            <th>AXIS</th>
-                            <th>PD</th>
-                        </tr>
-                        <tr>
-                            <th>OD</th>
-                            <th><input type="text" value="<?php echo $row->od_sphere ?>" class="popformdata form-control" id="popformdata_odsphere"></th>
-                            <th><input type="text" value="<?php echo $row->od_cylinder ?>"class="popformdata form-control" id="popformdata_odcylinder"></th>
-                            <th><input type="text" value="<?php echo $row->od_axis ?>"class="popformdata form-control" id="popformdata_odaxis"></th>
-                            <th><input type="text" value="<?php echo $row->od_pd ?>"class="popformdata form-control" id="popformdata_odpd"></th>
-                        </tr>
-                        <tr>
-                            <th>OS</th>
-                            <th><input type="text" value="<?php echo $row->os_sphere ?>"class="popformdata form-control" id="popformdata_ossphere"></th>
-                            <th><input type="text" value="<?php echo $row->os_cylinder ?>"class="popformdata form-control" id="popformdata_oscylinder"></th>
-                            <th><input type="text" value="<?php echo $row->os_axis ?>"class="popformdata form-control" id="popformdata_osaxis"></th>
-                            <th><input type="text" value="<?php echo $row->os_pd ?>"class="popformdata form-control" id="popformdata_ospd"></th>
-                        </tr>
-                    </table>          
+            <fieldset class="content-group">
+                <legend class="text-bold">OD</legend>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label>SPHERE</label>
+                            <input type="text" class="popformdata form-control" id="popformdata_odsphere" value="<?php echo $row->od_sphere ?>">
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label>CYLINDER</label>
+                            <input type="text" class="popformdata form-control" id="popformdata_odcylinder" value="<?php echo $row->od_cylinder ?>">
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label>AXIS</label>
+                            <input type="text" class="popformdata form-control" id="popformdata_odaxis" value="<?php echo $row->od_axis ?>">
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label>PD</label>
+                            <input type="text" class="popformdata form-control" id="popformdata_odpd" value="<?php echo $row->od_pd ?>">
+                        </div>
+                    </div>
                 </div>
-            </div><!-- End .item form-group  -->
-    </div>
-    <div class="modal-footer">
-        <div class='right'>
-            <button class="btn btn-success ui-wizard-content ui-formwizard-button" id="popformdata_save" type="button">Update</button>
-        </div>
+            </fieldset>
+            <fieldset class="content-group">
+                <legend class="text-bold">OS</legend>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label>SPHERE</label>
+                            <input type="text" class="popformdata form-control" id="popformdata_ossphere" value="<?php echo $row->os_sphere ?>">
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label>CYLINDER</label>
+                            <input type="text" class="popformdata form-control" id="popformdata_oscylinder" value="<?php echo $row->os_cylinder ?>">
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label>AXIS</label>
+                            <input type="text" class="popformdata form-control" id="popformdata_osaxis" value="<?php echo $row->os_axis ?>">
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label>PD</label>
+                            <input type="text" class="popformdata form-control" id="popformdata_ospd" value="<?php echo $row->os_pd ?>">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" id="popformdata_save" class="btn btn-success"> <i class="icon-add-to-list position-left"></i>Update Refraction</button>
+            </div>
+        </form>
     </div>
 </div>
 <script type="text/javascript">
