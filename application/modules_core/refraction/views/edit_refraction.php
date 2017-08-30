@@ -61,7 +61,7 @@
             </fieldset>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" id="popformdata_save" class="btn btn-success"> <i class="icon-add-to-list position-left"></i>Update Refraction</button>
+                <button type="button" id="popformdata_save" class="btn bg-teal"> <i class="icon-pencil7 position-left"></i>Update Refraction</button>
             </div>
         </form>
     </div>

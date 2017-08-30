@@ -9,14 +9,13 @@
         <form class="form-horizontal form-label-left" novalidate>
             <div class="item form-group" id='div_popformdata_location'>
                 <div class="col-lg-12">
-                    <textarea id="popformdata_vt"class="wysihtml5 wysihtml5-min form-control popformdata"> </textarea>
+                    <textarea id="popformdata_vt" class="wysihtml5 wysihtml5-min form-control popformdata"> </textarea>
                 </div>
             </div><!-- End .item form-group  -->
     </div>
     <div class="modal-footer">
-        <div class='right'>
-            <button class="btn btn-success ui-wizard-content ui-formwizard-button" id="popformdata_save" type="button">Add</button>
-        </div>
+        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+        <button type="button" id="popformdata_save" class="btn bg-teal"> <i class="icon-add-to-list position-left"></i>Add</button>
     </div>
 </div>
 <script type="text/javascript">

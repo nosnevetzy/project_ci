@@ -14,9 +14,8 @@
             </div><!-- End .item form-group  -->
     </div>
     <div class="modal-footer">
-        <div class='right'>
-            <button class="btn btn-success ui-wizard-content ui-formwizard-button" id="popformdata_save" type="button">Update</button>
-        </div>
+        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+        <button type="button" id="popformdata_save" class="btn bg-teal"> <i class="icon-pencil7 position-left"></i>Update</button>
     </div>
 </div>
 <script type="text/javascript">
