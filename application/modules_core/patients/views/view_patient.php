@@ -1,5 +1,7 @@
 <?php $this->load->view(admin_dir('template/header')); ?>
 
+<?php $segment = explode('/', current_url()); ?>
+
 <!-- Main content -->
 <div class="content-wrapper">
 
@@ -39,17 +41,17 @@
                             <div class="panel-body">
                                 <div class="tabbable nav-tabs-vertical nav-tabs-left">
                                     <ul class="nav nav-tabs nav-tabs-highlight">
-                                        <li class="active"><a href="#info" data-toggle="tab"><i class="icon-menu7 position-left"></i> INFORMATION</a></li>
-                                        <li><a href="#ref" data-toggle="tab"><i class="icon-calendar3 position-left"></i> REFRACTION</a></li>
-                                        <li><a href="#cee" data-toggle="tab"><i class="icon-cog3 position-left"></i> COMPREHENSIVE EYE EXAMINATION</a></li>
-                                        <li><a href="#cl" data-toggle="tab"><i class="icon-cog3 position-left"></i> CONTACT LENS</a></li>
-                                        <li><a href="#iop" data-toggle="tab"><i class="icon-cog3 position-left"></i> IOP MEASUREMENT</a></li>
-                                        <li><a href="#vt" data-toggle="tab"><i class="icon-cog3 position-left"></i> VISUAL THERAPY</a></li>
-                                        <li><a href="#cer" data-toggle="tab"><i class="icon-cog3 position-left"></i> CERTIFICATION</a></li>
+                                        <li <?php if(empty($segment[9])): ?> class="active" <?php endif; ?>><a href="#info" data-toggle="tab"><i class="icon-menu7 position-left"></i> INFORMATION</a></li>
+                                        <li <?php if(!empty($segment[9]) && $segment[9] == "refraction"): ?> class="active" <?php endif; ?>><a href="#ref" data-toggle="tab"><i class="icon-calendar3 position-left"></i> REFRACTION</a></li>
+                                        <li <?php if(!empty($segment[9]) && $segment[9] == "cee"): ?> class="active" <?php endif; ?>><a href="#cee" data-toggle="tab"><i class="icon-cog3 position-left"></i> COMPREHENSIVE EYE EXAMINATION</a></li>
+                                        <li <?php if(!empty($segment[9]) && $segment[9] == "cl"): ?> class="active" <?php endif; ?>><a href="#cl" data-toggle="tab"><i class="icon-cog3 position-left"></i> CONTACT LENS</a></li>
+                                        <li <?php if(!empty($segment[9]) && $segment[9] == "iop"): ?> class="active" <?php endif; ?>><a href="#iop" data-toggle="tab"><i class="icon-cog3 position-left"></i> IOP MEASUREMENT</a></li>
+                                        <li <?php if(!empty($segment[9]) && $segment[9] == "vt"): ?> class="active" <?php endif; ?>><a href="#vt" data-toggle="tab"><i class="icon-cog3 position-left"></i> VISUAL THERAPY</a></li>
+                                        <li <?php if(!empty($segment[9]) && $segment[9] == "cer"): ?> class="active" <?php endif; ?>><a href="#cer" data-toggle="tab"><i class="icon-cog3 position-left"></i> CERTIFICATION</a></li>
                                     </ul>
 
                                     <div class="tab-content">
-                                        <div class="tab-pane fade in active" id="info">
+                                        <div class="tab-pane fade <?php if(empty($segment[9])): ?> active in <?php endif; ?>" id="info">
                                             <div class="panel panel-flat">
                                                 <div class="panel-body flex">
                                                     <div class="col-md-4 col-sm-4 col-xs-12 profile_left">
@@ -91,7 +93,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="tab-pane fade" id="ref">
+                                        <div class="tab-pane fade <?php if(!empty($segment[9]) && $segment[9] == "refraction"): ?> active in <?php endif; ?>" id="ref">
 
                                             <div class="panel panel-flat">
                                                 <div class="panel-heading">
@@ -149,7 +151,7 @@
 
                                         </div>
 
-                                        <div class="tab-pane fade" id="cee">
+                                        <div class="tab-pane fade <?php if(!empty($segment[9]) && $segment[9] == "cee"): ?> active in <?php endif; ?>" id="cee">
 
                                             <div class="panel panel-flat">
                                                 <div class="panel-body">
@@ -173,7 +175,7 @@
 
                                         </div>
 
-                                        <div class="tab-pane fade" id="iop">
+                                        <div class="tab-pane fade <?php if(!empty($segment[9]) && $segment[9] == "iop"): ?> active in <?php endif; ?>" id="iop">
 
                                             <div class="panel panel-flat">
                                                 <div class="panel-heading">
@@ -211,7 +213,7 @@
 
                                         </div>
 
-                                        <div class="tab-pane fade" id="vt">
+                                        <div class="tab-pane fade <?php if(!empty($segment[9]) && $segment[9] == "vt"): ?> active in <?php endif; ?>" id="vt">
 
                                             <div class="panel panel-flat">
                                                 <div class="panel-heading">
@@ -249,7 +251,7 @@
                                             
                                         </div>
 
-                                        <div class="tab-pane fade" id="cer">
+                                        <div class="tab-pane fade <?php if(!empty($segment[9]) && $segment[9] == "cer"): ?> active in <?php endif; ?>" id="cer">
 
                                             <div class="panel panel-flat">
                                                 <div class="panel-body">
